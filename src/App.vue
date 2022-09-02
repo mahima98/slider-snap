@@ -1,12 +1,4 @@
-<script setup>
-function greet() {
-  var container = document
-    .querySelectorAll(".snap-container .snap-wrapper")
-    .forEach((n) => n.classList.remove("snap-wrapper"));
-  // var elements = container.getElementsByClassName(".snap-wrapper");
-  console.log("element", container);
-}
-</script>
+<script setup></script>
 
 <template>
   <!-- scroll snap -->
@@ -14,7 +6,6 @@ function greet() {
     <div class="">
       <div
         class="snap-container flex gap-5 snap-x snap-mandatory h-48 w-screen overflow-scroll"
-        @mouseover="greet"
       >
         <div
           class="snap-wrapper ml-[500px] snap-center shrink-0 rounded-md shadow-md bg-amber-200 grid w-[400px] h-48 place-items-center text-8xl"
@@ -77,6 +68,5 @@ function greet() {
 
 .snap-container:hover > .snap-wrapper {
   animation-play-state: paused;
-  animation-fill-mode: forwards;
 }
 </style>
